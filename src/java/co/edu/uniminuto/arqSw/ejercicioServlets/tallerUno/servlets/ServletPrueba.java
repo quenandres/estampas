@@ -32,17 +32,12 @@ public class ServletPrueba extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
                
             String boton = request.getParameter("boton");
-           
-            
-
-            
-            
             if (boton.equals("Administrador")){
                 response.sendRedirect("admin.jsp");
             } else if (boton.equals("Artista")){

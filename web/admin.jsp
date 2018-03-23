@@ -10,19 +10,19 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div id="header">
-			<ul class="nav">
-				<li><a href="index.jsp">Inicio</a></li>
-				<li><a href="">Estampas</a>
-					<ul>
-                                            <li><a href="">Inventario</a></li>
-                                            <li><a href="">Registrar</a></li>												
-					</ul>
-				</li>
-                                
-				
-			</ul>
+            <form action ="ServletMenus" method="post">
+                <div id="header">
+                    <ul class="nav">
+                            <li><a href="index.jsp">Inicio</a></li>
+                            <li><a href="">Estampas</a>
+                            <ul>
+                                <li><input type="submit" value="inventario" name="boton"></li>
+                                <li><input type="submit" value="registrar" name="boton"></li>
+                             </ul>
+			</li>
+                    </ul>
 		</div>
+            </form>
         <br><br><br>
         
         <h1 align="center">Estampados</h1>

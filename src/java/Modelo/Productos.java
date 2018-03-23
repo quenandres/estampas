@@ -15,7 +15,9 @@ public class Productos {
         this.imagen = imagen;
     }
 
+    public Productos(){
     
+    }
     
     
     public int getCodigoproducto() {

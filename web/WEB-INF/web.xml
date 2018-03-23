@@ -4,9 +4,25 @@
         <servlet-name>ServletTutorial</servlet-name>
         <servlet-class>ServletTutorial</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletMenus</servlet-name>
+        <servlet-class>co.edu.uniminuto.arqSw.ejercicioServlets.tallerUno.servlets.ServletMenus</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletRegistro</servlet-name>
+        <servlet-class>co.edu.uniminuto.arqSw.ejercicioServlets.tallerUno.servlets.ServletRegistro</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletTutorial</servlet-name>
         <url-pattern>/ServletTutorial</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMenus</servlet-name>
+        <url-pattern>/ServletMenus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletRegistro</servlet-name>
+        <url-pattern>/ServletRegistro</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
