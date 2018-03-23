@@ -28,4 +28,29 @@ public class ProductoDB {
         
         return lista;
     }
+    //INSERTAR NUEVOS PRODUCTOS
+    
+    public static boolean insertarProducto(Productos pro){
+        boolean respuesta=false;
+        Connection cn=null;
+        CallableStatement csta = null;
+        cn = ConexionDB.getConexion();
+        try{
+            csta=cn.prepareCall("{call insertar_producto(?,?,?,?)}");
+            csta.registerOutParameter(1,Types.INTEGER);
+            csta.setString(2,pro.getNombre());
+            csta.setDouble(3,pro.getPrecio());
+            csta.setString(4,pro.getImagen());
+            int i = csta.executeUpdate();
+            if(i==1){
+                respuesta=true;
+            }    
+            
+        }catch(Exception e){System.out.println("Error al crea producto");}
+        
+        
+        return respuesta;
+    }
+    
+    
 }
