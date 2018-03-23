@@ -52,5 +52,24 @@ public class ProductoDB {
         return respuesta;
     }
     
+    public static boolean insertarCompra(Productos pro){
+        boolean respuesta=false;
+        Connection cn=null;
+        CallableStatement csta = null;
+        cn = ConexionDB.getConexion();
+        try{
+            csta=cn.prepareCall("{call insertar_compra(?)}");
+            csta.registerOutParameter(1,Types.INTEGER);
+            csta.setString(2,pro.getImagen());
+            int i = csta.executeUpdate();
+            if(i==1){
+                respuesta=true;
+            }    
+            
+        }catch(Exception e){System.out.println("Error al crea producto");}
+        
+        
+        return respuesta;
+    }
     
 }

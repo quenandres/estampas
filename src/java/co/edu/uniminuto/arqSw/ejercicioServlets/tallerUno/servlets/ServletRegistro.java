@@ -20,11 +20,22 @@ public class ServletRegistro extends HttpServlet {
        String accion=request.getParameter("accion");
        if(accion.equals("insertar")){
            this.RegistrarProducto(request,response);
+       }else if(accion.equals("compra")){
+           this.RegistrarCompra(request,response);
        }
+    }
+    
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        processRequest(req,res);
+    }
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        processRequest(req,res);
     }
     
     private void RegistrarProducto(HttpServletRequest request,HttpServletResponse response)
         throws ServletException, IOException{
+            
+        
             Productos p= new Productos();
             p.setNombre(request.getParameter("txtNom"));
             p.setPrecio(Double.parseDouble(request.getParameter("txtPre")));
@@ -38,6 +49,11 @@ public class ServletRegistro extends HttpServlet {
             }
     
         }
+    private void RegistrarCompra(HttpServletRequest request,HttpServletResponse response)
+    throws ServletException, IOException{
+    
+    
+    }
 }
 
   

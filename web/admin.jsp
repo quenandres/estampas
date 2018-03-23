@@ -11,7 +11,8 @@
     </head>
     <body>
         <div class="main">
-            <h3><strong>Bienvenido Artista</strong></h3>
+            <h3><strong>Bienvenido Administrador</strong></h3>
+            
 
             <form action ="ServletMenus" method="post">
                 <div id="header">
@@ -45,7 +46,7 @@
                    salto++;
                    %>
                     
-                        <td><img style="margin:auto;" src="imagenes/<%=p.getImagen()%>" width="100" height="100"><br>
+                        <td><img style="margin:auto;" src="img/<%=p.getImagen()%>" width="100" height="100"><br>
                             <%=p.getNombre()%><br>
                         <%=p.getPrecio()%>        <br>                                      
                         Modificar \\ Añadir

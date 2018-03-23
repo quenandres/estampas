@@ -16,6 +16,7 @@
         <%
             if(request.getParameter("men")!=null){
                 out.println(request.getParameter("men"));
+                response.sendRedirect("admin.jsp");
             }
         %>  
         </h1>

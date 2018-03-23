@@ -42,7 +42,20 @@
                 </tr>
                  <tr>
                     <td>Imagen</td>
-                    <td><input type="text" name="txtImg"></td>                    
+                    <td>
+                        <select name="txtImg">
+                            <option value="1.png">Estampa 1</option>
+                            <option value="2.png">Estampa 2</option>
+                            <option value="3.png">Estampa 3</option>
+                            <option value="4.png">Estampa 4</option>
+                            <option value="5.png">Estampa 5</option>
+                            <option value="6.png">Estampa 6</option>
+                            <option value="7.png">Estampa 7</option>
+                            <option value="8.png">Estampa 8</option>
+                            <option value="9.png">Estampa 9</option>
+                            <option value="10.png">Estampa 10</option>
+                        </select>
+                    </td>                    
                 </tr>
                 <tr align="center">
                     <td><input type="submit" value="Guardar"></td>                    
