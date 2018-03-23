@@ -30,7 +30,7 @@
             </form>
         <br><br><br>
         <h1 style="text-align: center;">Registro</h1>
-        <form action="ServletRegistro" method="get">
+        <form action="ServletRegistro">
             <table style="margin:auto;">
                 <tr>
                     <td>Nombre:</td>

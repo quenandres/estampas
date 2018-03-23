@@ -16,7 +16,7 @@ import java.util.*;
 public class ServletRegistro extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
        String accion=request.getParameter("accion");
        if(accion.equals("insertar")){
            this.RegistrarProducto(request,response);
@@ -31,8 +31,11 @@ public class ServletRegistro extends HttpServlet {
             p.setImagen(request.getParameter("txtImg"));
             
             boolean respuesta = ProductoDB.insertarProducto(p);
-            
-            return respuesta;
+            if(respuesta){
+                response.sendRedirect("mensaje.jsp?men=se registro con exito");
+            }else{
+                response.sendRedirect("mensaje.jsp?men=No se registro con exito!! ");
+            }
     
         }
 }

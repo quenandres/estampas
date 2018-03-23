@@ -10,33 +10,25 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="main">
-            <h3><strong>Bienvenido Artista</strong></h3>
-
             <form action ="ServletMenus" method="post">
                 <div id="header">
-                    <ul class="nav" >
-				<li><a href="index.jsp">Inicio</a></li>
-				<li><a href="">Estampas</a>
-					<ul>
-						<li><a href="">Inventario</a></li>
-						<li><a href="registrar.jsp">registrar</a></li>
-						
-						</li>
-					</ul>
-				</li>
-                                
-				
-			</ul>
-                    
+                    <ul class="nav">
+                            <li><a href="index.jsp">Inicio</a></li>
+                            <li><a href="">Estampas</a>
+                            <ul>
+                                <li><input type="submit" value="inventario" name="boton"></li>
+                                <li><input type="submit" value="registrar" name="boton"></li>
+                             </ul>
+			</li>
+                    </ul>
 		</div>
             </form>
         <br><br><br>
         
-        <h1 style="margin-bottom: 20px;">Estampados</h1>
+        <h1 align="center">Estampados</h1>
         
         
-        <table style="margin:auto;" border="0" width="90%" align="center"  background-color: rgba(255,255,255,.4); >
+        <table style="margin:auto;" border="0" width="700" align="center" bgcolor="#303030">
             <%
             ArrayList<Productos> lista=ProductoDB.obtenerproductos();
                 int salto=0;
@@ -61,6 +53,6 @@
                     }
             %>           
         </table>
-        </div>
+        
     </body>
 </html>
